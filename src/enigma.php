@@ -12,11 +12,12 @@ switch ($action) {
     case "decode_cesar":
         $output_cesar = decode_cesar($_POST["input_cesar"], $_POST["cesar_key"]);
         break;
-    case "endecode_vigenere":
-        $output_vigenere = endecode_vigenere($_POST["input_vigenere"], $_POST["vigenere_key"]);
+    case "encode_vigenere":
+        $output_vigenere = encode_vigenere($_POST["input_vigenere"], $_POST["vigenere_key"]);
+        break;
+    case "decode_vigenere":
+        $output_vigenere = decode_vigenere($_POST["input_vigenere"], $_POST["vigenere_key"]);
         break;
 }
-
-
 
 require_once("views/index.phtml");
