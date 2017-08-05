@@ -45,7 +45,7 @@
         <header>
             <h1>Le chiffre de Vigenère</h1>
         </header>
-        <div id="vigenere">
+        <div>
             <ul>
                 <form method="POST">
                     <li>
@@ -61,6 +61,31 @@
                         <button type="submit" name="action" value="encode_vigenere">Coder</button>
                         /
                         <button type="submit" name="action" value="decode_vigenere">Decoder</button>
+                    </li>
+                </form>
+            </ul>
+        </div>
+    </section>
+    <section id="vernam">
+        <header>
+            <h1>Le chiffre de Vernam</h1>
+        </header>
+        <div>
+            <ul>
+                <form method="POST">
+                    <li>
+                        Key: <input type="text" name="vernam_key" value="">
+                    </li>
+                    <li>
+                        Input: <input type="text" name="input_vernam" value="">
+                    </li>
+                    <li>
+                        Output: <span><?= htmlspecialchars($output_vernam) ?></span>
+                    </li>
+                    <li>
+                        <button type="submit" name="action" value="encode_vernam">Coder</button>
+                        /
+                        <button type="submit" name="action" value="decode_vernam">Decoder</button>
                     </li>
                 </form>
             </ul>
