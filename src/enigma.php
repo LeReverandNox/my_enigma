@@ -13,7 +13,8 @@ switch ($action) {
         $output_cesar = decode_cesar($_POST["input_cesar"], $_POST["cesar_key"]);
         break;
     case "endecode_vigenere":
-        $output_vigenere = endecode_vigenere();
+        $output_vigenere = endecode_vigenere($_POST["input_vigenere"], $_POST["vigenere_key"]);
+        break;
 }
 
 
