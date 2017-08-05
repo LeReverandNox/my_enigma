@@ -8,10 +8,10 @@ $action = $_POST["action"];
 
 switch ($action) {
     case 'code_cesar':
-        $output_cesar = code_cesar($_POST["input_cesar"], $_POST["cesar_key"]);
+        $output_cesar = endecode_cesar($_POST["input_cesar"], $_POST["cesar_key"], "encode");
         break;
     case "decode_cesar":
-        $output_cesar = decode_cesar($_POST["input_cesar"], $_POST["cesar_key"]);
+        $output_cesar = endecode_cesar($_POST["input_cesar"], $_POST["cesar_key"], "decode");
         break;
     case "encode_vigenere":
         $output_vigenere = encode_vigenere($_POST["input_vigenere"], $_POST["vigenere_key"]);
