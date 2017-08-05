@@ -16,9 +16,5 @@ function isLower($char)
 
 function isAlpha($char)
 {
-    $ascii_code = ord($char);
-    if (($ascii_code >= 65 && $ascii_code <= 90) ||
-        ($ascii_code >= 97 && $ascii_code <= 122))
-        return true;
-    return false;
+    return ctype_alpha($char);
 }
