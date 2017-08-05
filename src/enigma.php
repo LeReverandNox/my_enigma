@@ -20,10 +20,10 @@ switch ($action) {
         $output_vigenere = endecode_vigenere($_POST["input_vigenere"], $_POST["vigenere_key"], "decode");
         break;
     case "encode_vernam":
-        $output_vernam = encode_vernam($_POST["input_vernam"], $_POST["vernam_key"]);
+        $output_vernam = endecode_vernam($_POST["input_vernam"], $_POST["vernam_key"], "encode");
         break;
     case "decode_vernam":
-        $output_vernam = decode_vernam($_POST["input_vernam"], $_POST["vernam_key"]);
+        $output_vernam = endecode_vernam($_POST["input_vernam"], $_POST["vernam_key"], "decode");
         break;
 }
 
