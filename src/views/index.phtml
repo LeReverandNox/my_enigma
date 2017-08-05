@@ -11,7 +11,7 @@
         <h1>my_enigma</h1>
     </header>
 
-    <section>
+    <section id="cesar">
         <header>
             <h1>Le chiffre de César</h1>
         </header>
@@ -41,7 +41,29 @@
             </ul>
         </div>
     </section>
-
+    <section id="vigenere">
+        <header>
+            <h1>Le chiffre de Vigenère</h1>
+        </header>
+        <div id="vigenere">
+            <ul>
+                <form method="POST">
+                    <li>
+                        Key: <input type="text" name="vigenere_key" value="">
+                    </li>
+                    <li>
+                        Input: <input type="text" name="input_vigenere" value="">
+                    </li>
+                    <li>
+                        Output: <span><?= htmlspecialchars($output_vigenere) ?></span>
+                    </li>
+                    <li>
+                        <button type="submit" name="action" value="endecode_vigenere">Encoder / Décoder</button>
+                    </li>
+                </form>
+            </ul>
+        </div>
+    </section>
     <footer>
         <p>Powered by laidet_r</p>
     </footer>
