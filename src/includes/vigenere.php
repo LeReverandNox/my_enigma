@@ -9,9 +9,10 @@ function encode_vigenere($input = "", $key = "")
     $key_upper = strtoupper($key);
     $input_upper = strtoupper($input);
 
-    if ($key && !isAlpha($key)) {
+    if (!$key)
+        return "Please provide a key !";
+    if (!isAlpha($key))
         return "Please provide a alphabetical key only !";
-    }
 
     $ignored = 0;
     for ($i = 0; $i < $input_length; $i++) {
@@ -45,9 +46,10 @@ function decode_vigenere($input = "", $key = "")
     $key_upper = strtoupper($key);
     $input_upper = strtoupper($input);
 
-    if ($key && !isAlpha($key)) {
+    if (!$key)
+        return "Please provide a key !";
+    if (!isAlpha($key))
         return "Please provide a alphabetical key only !";
-    }
 
     $ignored = 0;
     for ($i = 0; $i < $input_length; $i++) {
