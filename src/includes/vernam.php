@@ -4,7 +4,7 @@ function endecode_vernam($input = "", $key = "", $action = "")
 {
     $output_array = [];
     $input_length = strlen($input);
-    $input_no_spaces_length = strlen(preg_replace('/\s+/', '', $input));
+    $input_only_alpha_length = strlen(preg_replace("/[^A-Za-z]+/", "", $input));
     $key_length = strlen($key);
 
     $key_upper = strtoupper($key);
@@ -14,7 +14,7 @@ function endecode_vernam($input = "", $key = "", $action = "")
         return "Please provide a key !";
     if (!isAlpha($key))
         return "Please provide a alphabetical key only !";
-    if ($input_no_spaces_length !== $key_length)
+    if ($input_only_alpha_length !== $key_length)
         return "The key must be the same length as the input";
 
     $ignored = 0;
