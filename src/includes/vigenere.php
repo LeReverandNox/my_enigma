@@ -13,11 +13,13 @@ function encode_vigenere($input = "", $key = "")
         return "Please provide a alphabetical key only !";
     }
 
+    $ignored = 0;
     for ($i = 0; $i < $input_length; $i++) {
         $char = $input_upper[$i];
-        $char_key = $key_upper[$i % $key_length];
+        $char_key = $key_upper[($i - $ignored) % $key_length];
 
         if (!isAlpha($char)) {
+            $ignored++;
             $output_array[$i] = $char;
             continue;
         }
@@ -47,11 +49,13 @@ function decode_vigenere($input = "", $key = "")
         return "Please provide a alphabetical key only !";
     }
 
+    $ignored = 0;
     for ($i = 0; $i < $input_length; $i++) {
         $char = $input_upper[$i];
-        $char_key = $key_upper[$i % $key_length];
+        $char_key = $key_upper[($i - $ignored) % $key_length];
 
         if (!isAlpha($char)) {
+            $ignored++;
             $output_array[$i] = $char;
             continue;
         }
