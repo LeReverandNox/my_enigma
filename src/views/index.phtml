@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>my_enigma</title>
+</head>
+<body>
+    <header>
+        <h1>my_enigma</h1>
+    </header>
+
+    <section>
+        <header>
+            <h1>Le chiffre de César</h1>
+        </header>
+        <div>
+            <ul>
+                <form method="POST">
+                    <li>
+                        Key:
+                        <select name="cesar_key">
+                            <?php for ($i = 1; $i < 27; $i++): ?>
+                                <option value="<?= $i ?>"><?= $i ?></option>
+                            <?php endfor ?>
+                        </select>
+                    </li>
+                    <li>
+                        Input: <input type="text" name="input_cesar" value="">
+                    </li>
+                    <li>
+                        Output: <span><?= htmlspecialchars($output_cesar) ?></span>
+                    </li>
+                    <li>
+                        <button type="submit" name="action" value="code_cesar">Coder</button>
+                        /
+                        <button type="submit" name="action" value="decode_cesar">Decoder</button>
+                    </li>
+                </form>
+            </ul>
+        </div>
+    </section>
+
+    <footer>
+        <p>Powered by laidet_r</p>
+    </footer>
+</body>
+</html>
