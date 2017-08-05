@@ -1,8 +1,6 @@
 <?php
-function code_cesar()
+function code_cesar($input = "", $key = 1)
 {
-    $key = $_POST["cesar_key"];
-    $input = $_POST["input_cesar"];
     $input_length = strlen($input);
     $output_array = [];
 
@@ -25,10 +23,8 @@ function code_cesar()
     return $output;
 }
 
-function decode_cesar()
+function decode_cesar($input = "", $key = 1)
 {
-    $key = $_POST["cesar_key"];
-    $input = $_POST["input_cesar"];
     $input_length = strlen($input);
     $output_array = [];
 
