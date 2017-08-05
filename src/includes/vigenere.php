@@ -24,7 +24,8 @@ function encode_vigenere($input = "", $key = "")
 
         $char_code = ord($char) - 65;
         $cipher_code = ord($char_key) - 65;
-        $deciphered_char = chr(65 + ($char_code + $cipher_code) % 26);
+        $shift = (($char_code + $cipher_code) > 26) ? (($char_code + $cipher_code) - 26) : ($char_code + $cipher_code);
+        $deciphered_char = chr(65 + ($shift) % 26);
 
         $output_array[$i] = isUpper($input[$i]) ? strtoupper($deciphered_char) : strtolower($deciphered_char);
     }
