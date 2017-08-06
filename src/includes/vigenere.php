@@ -37,9 +37,9 @@ function endecode_vigenere($input = "", $key = "", $action = "")
                 break;
         }
 
-        $deciphered_char = chr(65 + ($shift) % 26);
+        $endecode_char = chr(65 + ($shift) % 26);
 
-        $output_array[$i] = isUpper($input[$i]) ? strtoupper($deciphered_char) : strtolower($deciphered_char);
+        $output_array[$i] = isUpper($input[$i]) ? strtoupper($endecode_char) : strtolower($endecode_char);
     }
 
     $output = implode($output_array);
